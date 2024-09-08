@@ -24,17 +24,22 @@ INSERT INTO Olores (receta_id, nombre_olor, cantidad) VALUES
 (2, 'Cedro', 10),
 (2, 'Ámbar', 5),
 (2, 'Pachulí', 7);
+
 SELECT * FROM Recetas;
+
 SELECT o.nombre_olor, o.cantidad
 FROM Olores o
 JOIN Recetas r ON o.receta_id = r.id
 WHERE r.nombre = 'Perfume Floral';
+
 SELECT r.nombre AS Receta, o.nombre_olor AS Olor, o.cantidad
 FROM Recetas r
 JOIN Olores o ON r.id = o.receta_id;
+
 SELECT nombre, aceites_esenciales
 FROM Recetas
 WHERE aceites_esenciales > 10;
+
 SELECT r.nombre
 FROM Recetas r
 JOIN Olores o ON r.id = o.receta_id
